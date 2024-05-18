@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace PatrickCullen\EnvTitle\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class EnvTitleCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'env-title';
 
     public $description = 'My command';
 
