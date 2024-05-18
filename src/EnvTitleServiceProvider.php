@@ -2,11 +2,11 @@
 
 namespace PatrickCullen\EnvTitle;
 
-use Spatie\LaravelPackageTools\Package;
-use PatrickCullen\EnvTitle\Components\EnvTitle;
 use PatrickCullen\EnvTitle\Commands\EnvTitleCommand;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use PatrickCullen\EnvTitle\Components\EnvTitle;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class EnvTitleServiceProvider extends PackageServiceProvider
 {
@@ -22,7 +22,7 @@ class EnvTitleServiceProvider extends PackageServiceProvider
             // ->hasConfigFile()
             ->hasViews()
             ->hasViewComponents('pc', EnvTitle::class)
-            ->hasInstallCommand(function(InstallCommand $command) {
+            ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publish('components')
                     ->publish('views');
