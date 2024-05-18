@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\ServiceProvider;
+
+class EnvTitleServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
+    {
+        Blade::anonymousComponentPath(__DIR__ . '/../../resources/views/vendor/env-title');
+    }
+
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+    }
+}

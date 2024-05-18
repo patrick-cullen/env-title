@@ -22,10 +22,12 @@ class EnvTitleServiceProvider extends PackageServiceProvider
             // ->hasConfigFile()
             ->hasViews()
             ->hasViewComponents('pc', EnvTitle::class)
-            ->hasInstallCommand(function (InstallCommand $command) {
+            ->publishesServiceProvider('EnvTitleServiceProvider')
+            ->hasInstallCommand(function(InstallCommand $command) {
                 $command
                     ->publish('components')
-                    ->publish('views');
+                    ->publish('views')
+                    ->copyAndRegisterServiceProviderInApp();
             });
         // ->hasMigration('create_env-title_table')
         // ->hasCommand(EnvTitleCommand::class)
