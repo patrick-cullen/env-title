@@ -23,7 +23,7 @@ class EnvTitleServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasViewComponents('pc', EnvTitle::class)
             ->publishesServiceProvider('EnvTitleServiceProvider')
-            ->hasInstallCommand(function(InstallCommand $command) {
+            ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publish('components')
                     ->publish('views')
