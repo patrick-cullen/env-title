@@ -19,23 +19,10 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 
 ## Installation
 
-1. Add the following to the `composer.json` file at the root of your project:
-
-```
-"repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/patrick-cullen/env-title"
-    }
-]
-```
-
-Or add the inner object to your `repositories` array if one already exists.
-
-You can install the package via composer:
+You can install the package via composer (-W flag is added for with all dependencies, currently a bug):
 
 ```bash
-composer require patrick-cullen/env-title
+composer require patrick-cullen/env-title -W
 ```
 
 The installation script will handle the rest:
