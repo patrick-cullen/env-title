@@ -34,9 +34,16 @@ php artisan env-title:install
 
 Now just replace your `<title>` tags with `<x-env-title>` blade components, and you're good to go.
 
-## Installing Dev Versions
+## Workflow for making changes to this package
 
-When installing dev versions of this package be sure to change the "minimum-stability" property in your project's composer.json file to "dev" before following the above installation steps.
+- Pick a project to pull this package into 
+```bash
+composer require patrick-cullen/env-title --prefer-source
+```
+- Tinker around and commit desired changes to version control (this is what the --prefer-source flag allows you to do).
+- Push your changes.
+    - If you see multiple remotes (origin and composer) don't worry - updating one will update the other momentarily.
+- Tag and push your changes - in a more refined workflow you would probably want to add a stability flag for anything not thoroughly tested and used by others, but standard semver should suffice.  
 
 <!--
 You can publish the config file with:
