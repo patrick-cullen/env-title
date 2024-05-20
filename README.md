@@ -25,6 +25,10 @@ php artisan env-title:install
 
 Now just replace your `<title>` tags with `<x-env-title>` blade components, and you're good to go.
 
+## Installing Dev Versions
+
+When installing dev versions of this package be sure to change the "minimum-stability" property in your project's composer.json file to "dev".
+
 <!--
 You can publish the config file with:
 
