@@ -2,8 +2,6 @@
 
 namespace PatrickCullen\EnvTitle;
 
-use PatrickCullen\EnvTitle\Commands\EnvTitleCommand;
-use PatrickCullen\EnvTitle\Components\EnvTitle;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -21,15 +19,11 @@ class EnvTitleServiceProvider extends PackageServiceProvider
             ->name('env-title')
             // ->hasConfigFile()
             ->hasViews()
-            ->hasViewComponents('pc', EnvTitle::class)
             ->publishesServiceProvider('EnvTitleServiceProvider')
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
-                    ->publish('components')
                     ->publish('views')
                     ->copyAndRegisterServiceProviderInApp();
             });
-        // ->hasMigration('create_env-title_table')
-        // ->hasCommand(EnvTitleCommand::class)
     }
 }
