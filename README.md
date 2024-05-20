@@ -11,11 +11,20 @@ This utility package creates a blade component that prepends the HTML document t
 
 ## Installation
 
-You can install the package via composer (-W flag is added for with all dependencies, currently a bug):
+You can install the package via composer:
 
 ```bash
-composer require patrick-cullen/env-title -W
+composer require patrick-cullen/env-title
 ```
+
+Note that you may need to add the -W flag if a dependency of env-title such as "spatie/laravel-package-tools" is required by other packages in your project and is installed at a version below the required versions for env-title. 
+Alternatively, run:
+
+```bash
+composer update
+```
+
+before installing this package via composer. 
 
 The installation script will handle the rest:
 
@@ -27,7 +36,7 @@ Now just replace your `<title>` tags with `<x-env-title>` blade components, and 
 
 ## Installing Dev Versions
 
-When installing dev versions of this package be sure to change the "minimum-stability" property in your project's composer.json file to "dev".
+When installing dev versions of this package be sure to change the "minimum-stability" property in your project's composer.json file to "dev" before following the above installation steps.
 
 <!--
 You can publish the config file with:
